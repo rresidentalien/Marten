@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Euro to Kuna Converter",
+  "version": "1.0",
+  "permissions": ["activeTab"],
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "description": "Hover to convert Euro to Kuna. If a website is unsupported, you can paste the amount into the popup to convert.",
+  "icons": {
+    "48": "kuna.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["popup.js","convert.js"]
+    }
+  ]
+}
